@@ -19,7 +19,7 @@ class HRModel {
 import UIKit
 import Foundation
 
-class MoreTableTabViewController : UITableViewController {
+class MoreTabTableViewController : UITableViewController {
     let more = [["image":"random","text":"랜덤"],
                 ["image":"record","text":"자세녹화"],
                 ["image":"calculator","text":"계산기"],

@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    let modelMore = OrderTableViewController()
+    let modelMore = MoreTabTableViewController()
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
