@@ -9,20 +9,20 @@
 import UIKit
 
 class ViewController: UIViewController {
-    let modelHR = OrderTableViewController()
+    let modelMore = OrderTableViewController()
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.modelHR.more.count
+        return self.modelMore.more.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = UITableViewCell.init(style: .value1, reuseIdentifier: nil)
         
-        let dicInfo = self.modelHR.more[indexPath.row]
+        let dicInfo = self.modelMore.more[indexPath.row]
         
         cell.textLabel!.text = dicInfo["name"]
         //cell.detailTextLabel?.text = dicInfo["type"]

@@ -19,7 +19,7 @@ class HRModel {
 import UIKit
 import Foundation
 
-class OrderTableViewController : UITableViewController {
+class MoreTableTabViewController : UITableViewController {
     let more = [["image":"random","text":"랜덤"],
                 ["image":"record","text":"자세녹화"],
                 ["image":"calculator","text":"계산기"],
@@ -33,18 +33,14 @@ class OrderTableViewController : UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let idCell = "random"
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: idCell)!
+        let cell = tableView.dequeueReusableCell(withIdentifier: idCell)! as! MoreTabTableViewCell
         
         // 초기화...
         let dicInfo = self.more[indexPath.row]
         
-        let icon = cell.viewWithTag(1) as! UIImageView
+        cell.icon.image = UIImage.init(named: dicInfo["image"]!)
         
-        icon.image = UIImage.init(named: dicInfo["image"]!)
-        
-        let labelName = cell.viewWithTag(2) as! UILabel
-        
-        labelName.text = dicInfo["text"]
+        cell.labelName.text = dicInfo["text"]
         
         return cell
     }
