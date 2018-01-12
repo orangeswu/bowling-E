@@ -20,10 +20,10 @@ import UIKit
 import Foundation
 
 class MoreTabTableViewController : UITableViewController {
-    let more = [["image":"random","text":"랜덤"],
-                ["image":"record","text":"자세녹화"],
-                ["image":"calculator","text":"계산기"],
-                ["image":"setting","text":"설정"]]
+    let more = [["icon":"random","name":"랜덤"],
+                ["icon":"record","name":"자세녹화"],
+                ["icon":"calculator","name":"계산기"],
+                ["icon":"setting","name":"설정"]]
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -38,9 +38,9 @@ class MoreTabTableViewController : UITableViewController {
         // 초기화...
         let dicInfo = self.more[indexPath.row]
         
-        cell.icon.image = UIImage.init(named: dicInfo["image"]!)
+        cell.icon.image = UIImage.init(named: dicInfo["icon"]!)
         
-        cell.labelName.text = dicInfo["text"]
+        cell.labelName.text = dicInfo["name"]
         
         return cell
     }
